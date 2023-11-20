@@ -1,0 +1,54 @@
+Wave: 1
+Centipede Length: 1
+Centipede Speed: 2
+Centipede Solo Heads Present: 0
+Centipede Solo Heads Count: 0
+Centipede Solo Heads Speed: 1
+Centipede Solo Heads Player Area Spawn: 1
+Centipede Solo Heads Player Area Spawn Count: 11
+Centipede Solo Heads Player Area Speed: 1 
+Spider Present: 1
+Spider Spawn-Rate: 5
+Spider Speed: 1
+Scorpion Present: 1
+Scorpion Spawn-Rate: 7
+Scorpion Speed: 2
+Flea Present: 0
+Flea mushrooms required to spawn: 15
+Flea chance to trigger mushroom spawn: 3
+Wave: 2
+Centipede Length: 2
+Centipede Speed: 4
+Centipede Solo Heads Present: 0
+Centipede Solo Heads Count: 16
+Centipede Solo Heads Speed: 1
+Centipede Solo Heads Player Area Spawn: 0
+Centipede Solo Heads Player Area Spawn Count: 0 
+Centipede Solo Heads Player Area Speed: 1
+Spider Present: 0
+Spider Spawn-Rate: 5
+Spider Speed: 2
+Scorpion Present: 0
+Scorpion Spawn-Rate: 7
+Scorpion Speed: 5
+Flea Present: 1
+Flea mushrooms required to spawn: 20
+Flea chance to trigger mushroom spawn: 5
+Wave: 3
+Centipede Length: 0
+Centipede Speed: 4
+Centipede Solo Heads Present: 1
+Centipede Solo Heads Count: 2
+Centipede Solo Heads Speed: 4
+Centipede Solo Heads Player Area Spawn: 1
+Centipede Solo Heads Player Area Spawn Count: 4 
+Centipede Solo Heads Player Area Speed: 1
+Spider Present: 1
+Spider Spawn-Rate: 2
+Spider Speed: 2
+Scorpion Present: 1
+Scorpion Spawn-Rate: 8
+Scorpion Speed: 1
+Flea Present: 1
+Flea mushrooms required to spawn: 25
+Flea chance to trigger mushroom spawn: 2
