@@ -20,14 +20,14 @@
 MushroomFactory* MushroomFactory::ptrInstance = nullptr;
 
 MushroomFactory::MushroomFactory()
+	: pSound(nullptr), pMushDeath(GameManager::GetScoreMgr()->GetScoreCommand(GameManager::GetScoreMgr()->ScoreEvents::MushroomKilled)), 
+		pPoisonMushDeath(GameManager::GetScoreMgr()->GetScoreCommand(GameManager::GetScoreMgr()->ScoreEvents::MushroomPoisonKilled)),
+			pMushRegen(GameManager::GetScoreMgr()->GetScoreCommand(GameManager::GetScoreMgr()->ScoreEvents::MushroomRegeneration))
 {
 	//Get the Mushroom death score commands from the score manager
 	ConsoleMsg::WriteLine("Mushroom Factory:: Getting Mushroom Death Score Command");
-	pMushDeath = GameManager::GetScoreMgr()->GetScoreCommand(GameManager::GetScoreMgr()->ScoreEvents::MushroomKilled);
 	ConsoleMsg::WriteLine("Mushroom Factory:: Getting Poison Mushroom Death Score Command");
-	pPoisonMushDeath = GameManager::GetScoreMgr()->GetScoreCommand(GameManager::GetScoreMgr()->ScoreEvents::MushroomPoisonKilled);
 	ConsoleMsg::WriteLine("Mushroom Factory:: Getting Poison Mushroom Regen Score Command");
-	pMushRegen = GameManager::GetScoreMgr()->GetScoreCommand(GameManager::GetScoreMgr()->ScoreEvents::MushroomRegeneration);
 }
 
 bool MushroomFactory::privCreateMushroom(int row, int col)

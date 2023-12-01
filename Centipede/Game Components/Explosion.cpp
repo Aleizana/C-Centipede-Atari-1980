@@ -5,12 +5,8 @@
 #include "GameManager.h"
 
 Explosion::Explosion()
+	: bitmap(nullptr), plrDeathHold(false)
 {
-	//Frame count width is the width of the sprite sheet divided by the number of diff sprites you have in the row
-	//Frame count height is the height of the sprite sheet divided by the number of diff sprites you have in the column
-	//Frames per second is the speed at which you will cycle through the sprites
-	//ExplosionSprite = AnimatedSprite(ResourceManager::GetTexture("explosion"), ExplosionFrameCountWidth, ExplosionFrameCountHeight, ExplosionSpriteFPS);
-	plrDeathHold = false;
 
 	SetDrawOrder(DisplayOnDeathDrawOrder);
 }

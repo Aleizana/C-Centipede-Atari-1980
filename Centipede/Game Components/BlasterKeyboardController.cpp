@@ -6,6 +6,10 @@
 #include "SoundManager.h"
 #include "BlasterFactory.h"
 
+BlasterKeyboardController::BlasterKeyboardController()
+	: inputOffset(0.0f)
+{
+}
 
 void BlasterKeyboardController::Initialize()
 {

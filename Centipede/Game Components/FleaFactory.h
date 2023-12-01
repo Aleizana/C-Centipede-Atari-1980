@@ -45,9 +45,9 @@ private:
 
 	FleaMover* fleaMoverRef;
 
-	int chanceToTriggerMushSpawn;
-
 	const int defaultIfChanceToTriggerIsZero = 1;
+
+	int chanceToTriggerMushSpawn;
 
 	// Note: Some factory designs also keep a list of 'currently active' objects
 	// Often useful at cleanup time. Not done for this demo however

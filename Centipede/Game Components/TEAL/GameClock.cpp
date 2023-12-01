@@ -11,6 +11,7 @@ const sf::Keyboard::Key GameClock::STEPONCE = sf::Keyboard::F9;
 
 
 GameClock::GameClock()
+	: frametime(0.0f)
 {
 	frameclock.restart();
 	TimeCurrentFrame = 0;

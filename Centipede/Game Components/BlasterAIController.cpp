@@ -67,6 +67,9 @@ void BlasterAIController::KeyPressed(Blaster* playerRef, sf::Keyboard::Key k, bo
 	{
 		ConsoleMsg::WriteLine("Swapping to real player");
 
+		//Start sounds when the game starts
+		GameManager::GetSoundManager()->Unmute();
+
 		//Swap to a human player to start the game
 		GameManager::GetPlayerMgr()->StartGamePlayerSwap();
 	}

@@ -9,6 +9,11 @@
 #include "Grid.h"
 #include "Mushroom.h"
 
+ScorpionMover::ScorpionMover()
+	: scorpionSpeed(0.0f)
+{
+}
+
 void ScorpionMover::HandleScorpionMove_Left(Scorpion* scorpionToMove, int& countMovement, int leftPrevCellCheck)
 {
 	//Get the current position of the Scorpion

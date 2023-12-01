@@ -40,8 +40,6 @@ CentipedeBody::CentipedeBody()
 	pHoldState = nullptr;
 
 	holdSpeed = 0.0f;
-
-	//incrementMoveArrayAmount = GameManager::GetGridMgr()->GetPixelDistance() / (GameManager::GetGridMgr()->GetPixelDistance() / (int)CentipedeHeadFactory::GetHeadSpeed());
 }
 
 void CentipedeBody::Initialize(sf::Vector2f p, int row, int col, CentipedeBody* _nextBody, CentipedeBody* _prevBody, CentipedeHead* _head, float speed)

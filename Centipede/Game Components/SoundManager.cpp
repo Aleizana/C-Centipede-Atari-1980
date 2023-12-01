@@ -131,18 +131,6 @@ SoundCommand* SoundManager::GetSoundCommand(SoundEvents ev)
 	return pCmd;
 }
 
-void SoundManager::AddSound(sf::Sound* playSound)
-{
-	//ConsoleMsg::WriteLine("\tCurrent player Sound -> Add " + Tools::ToString(val) + " points.");
-	//
-	////Tell the player manager to increase the Sound of the active player
-	//GameManager::GetPlayerMgr()->GetActivePlayer()->AddSoundToPlayer(val);
-
-	// Note: Depending on implementations, this *may* need to be a strategy pattern:
-	//      - regular mode: add Sound to current player
-	//      - Critter-recall mode (level change): do nothing
-}
-
 void SoundManager::SendSoundCmd(SoundCommand* c)
 {
 	QueueCmds.push(c);
@@ -152,6 +140,11 @@ void SoundManager::ProcessSounds()
 {
 	//Put "isMuted" boolean here
 	privProcessSound();
+}
+
+void SoundManager::Unmute()
+{
+	currStrategy = (SoundStrategy*)&SoundManager::playStrategy;
 }
 
 void SoundManager::ToggleMute()
@@ -176,9 +169,6 @@ void SoundManager::privProcessSound()
 
 		//Pass the sound to the current sound strategy for execution
 		currStrategy->ExecuteSound(c);
-
-		//c->Execute();
-		
 
 		QueueCmds.pop();
 	}

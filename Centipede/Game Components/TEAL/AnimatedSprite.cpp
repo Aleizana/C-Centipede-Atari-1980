@@ -12,7 +12,7 @@ AnimatedSprite::AnimatedSprite()
 	_interval = 1.0f / _fps;
 	_frameWidth = 0;
 	_frameHeight = 0;
-	//_frameCount = 0;
+	_frameCount = 0;
 	_firstFrame = 0;
 	_currentFrame = 0;
 	_lastFrame = 0;

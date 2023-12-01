@@ -15,12 +15,10 @@
 FleaFactory* FleaFactory::ptrInstance = nullptr;
 
 FleaFactory::FleaFactory()
+	: pDeath(GameManager::GetScoreMgr()->GetScoreCommand(GameManager::GetScoreMgr()->ScoreEvents::FleaKilled)), pSound(nullptr), chanceToTriggerMushSpawn(defaultIfChanceToTriggerIsZero)
 {
 	//Get the Flea death score command from the score manager
 	ConsoleMsg::WriteLine("Flea Factory:: Getting Flea Death Score Command");
-	pDeath = GameManager::GetScoreMgr()->GetScoreCommand(GameManager::GetScoreMgr()->ScoreEvents::FleaKilled);
-
-	chanceToTriggerMushSpawn = defaultIfChanceToTriggerIsZero;
 
 	fleaMoverRef = new FleaMover();
 }

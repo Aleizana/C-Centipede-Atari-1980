@@ -23,19 +23,6 @@ public:
 	float GetBaseFleaSpeed();
 
 private:
-	//Store speed in it's own variable so that it can be multiplied upon taking damage
-	float fleaCurrSpeed;
-
-	//For counting the pixels traveled by the flea to know it's grid pos
-	//int countMovement;
-
-	//For storing the cell size from the grid
-	int leftPrevCellCheck;
-
-	//Query the mushroom spawner and spawn mushroom in flea position if pos is unused
-	//Returns a boolean so that the flea mover can have the result
-	bool CallMushroomSpawner(Flea* fleaToMove);
-
 	//Flea game properties
 	const float FleaSpeed = 4.0f;
 	const float FleaSpeedMult = 1.5f;
@@ -49,6 +36,16 @@ private:
 
 	//The amount of rows that the flea moves through when leaving a cell
 	const int rowIncrementor = 1;
+
+	//Store speed in it's own variable so that it can be multiplied upon taking damage
+	float fleaCurrSpeed;
+
+	//For storing the cell size from the grid
+	int leftPrevCellCheck;
+
+	//Query the mushroom spawner and spawn mushroom in flea position if pos is unused
+	//Returns a boolean so that the flea mover can have the result
+	bool CallMushroomSpawner(Flea* fleaToMove);
 };
 
 #endif

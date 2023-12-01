@@ -10,6 +10,7 @@
 #include "PlayMode.h"
 
 ScoreInputManager::ScoreInputManager(AwesomeFont* newFont, sf::Vector2f bottomOfHUD)
+	: holdScore(0)
 {
 	RegisterInput(InputFlags::TextEntered);
 

@@ -6,12 +6,8 @@
 #include "ScoreManager.h"
 
 ScoreDisplayOnDeath::ScoreDisplayOnDeath()
+	: spriteRectInitTop(0)
 {
-	//Frame count width is the width of the sprite sheet divided by the number of diff sprites you have in the row
-	//Frame count height is the height of the sprite sheet divided by the number of diff sprites you have in the column
-	//Frames per second is the speed at which you will cycle through the sprites
-	//ScoreDisplayOnDeathSprite = AnimatedSprite(ResourceManager::GetTexture("ScoreDisplayOnDeath"), ScoreDisplayOnDeathFrameCountWidth, ScoreDisplayOnDeathFrameCountHeight, ScoreDisplayOnDeathSpriteFPS);
-
 	SetDrawOrder(DisplayOnDeathDrawOrder);
 }
 

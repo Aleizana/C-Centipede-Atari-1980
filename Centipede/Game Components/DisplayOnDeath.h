@@ -22,7 +22,7 @@ public:
 protected:
 	sf::Vector2f Pos;
 
-	CollisionTools::TextureBitmap* bitmap;
+	CollisionTools::TextureBitmap* bitmap = nullptr;
 
 	//Variables related to the initialization and animation of the sprite from a sprite sheet
 	const int DisplayOnDeathFrameCountWidth = 4;		//Number of sprites that will be cycled through in each row
@@ -33,9 +33,9 @@ protected:
 	const int DisplayOnDeathDrawOrder = 10000;
 
 	//To know when the animation for the DisplayOnDeath has ended
-	int countSpriteFrames;
+	int countSpriteFrames = 0;
 	const int EndSprite = DisplayOnDeathFrameCountWidth * DisplayOnDeathFrameCountHeight;
-	int spriteEndFrameOffset;
+	int spriteEndFrameOffset = 0;
 
 };
 

@@ -10,7 +10,7 @@
 
 Player::Player()
 	: lives(startingLives), score(0), waveNum(1), myBlaster(nullptr), gridRef(nullptr), storedGrid(false), myPlayerNum(0), ctrlRef(nullptr), controllerEnumVal(0), extraLifeCounter(1),
-		pNextPlayer(nullptr)
+		pNextPlayer(nullptr), pActivePlayerState(nullptr)
 {
 }
 

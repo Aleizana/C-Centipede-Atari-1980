@@ -17,14 +17,13 @@
 
 SpiderFactory* SpiderFactory::ptrInstance = nullptr;
 
-SpiderFactory::SpiderFactory() : SpiderSpeed(0.0f)
+SpiderFactory::SpiderFactory() : 
+	SpiderSpeed(0.0f), pDeath(GameManager::GetScoreMgr()->GetScoreCommand(GameManager::GetScoreMgr()->ScoreEvents::SpiderKilled)), spiderCount(0), pSound(nullptr)
 {
 	//Get the spider death score command from the score manager
 	ConsoleMsg::WriteLine("Spider Factory: Getting Spider Death Score Command");
-	pDeath = GameManager::GetScoreMgr()->GetScoreCommand(GameManager::GetScoreMgr()->ScoreEvents::SpiderKilled);
 
-	spiderCount = 0;
-
+	//Initialize each of the array indices of the spider state array with constant values from the moveFSM file
 	SpiderStateArray[0] = (SpiderMoveState*)&MoveFSM::StateSpiderMoveDownDiagLeft;
 	SpiderStateArray[1] = (SpiderMoveState*)&MoveFSM::StateSpiderMoveUpDiagLeft;
 	SpiderStateArray[2] = (SpiderMoveState*)&MoveFSM::StateSpiderMoveDown;

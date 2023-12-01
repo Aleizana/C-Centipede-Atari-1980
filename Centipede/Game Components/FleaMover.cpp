@@ -8,9 +8,8 @@
 #include "FleaFactory.h"
 
 FleaMover::FleaMover() : 
-	fleaCurrSpeed(FleaSpeed)
+	fleaCurrSpeed(FleaSpeed), leftPrevCellCheck(0)
 {
-
 }
 
 void FleaMover::HandleFleaMove(Flea* fleaToMove, int& countMovement, int leftPrevCellCheck)

@@ -25,12 +25,12 @@ public:
 	// events
 	enum SoundEvents { BlasterDeath, FireDart, FleaFall, ScorpionLoop, SpiderLoop, ExtraLife, NonPlayerDeath, CentipedeLoop, MushroomRegen };
 
-	void AddSound(sf::Sound* playSound);
-
 	SoundCommand* GetSoundCommand(SoundEvents ev);
 
 	void SendSoundCmd(SoundCommand* c);
 	void ProcessSounds();
+
+	void Unmute();
 
 	void ToggleMute();
 

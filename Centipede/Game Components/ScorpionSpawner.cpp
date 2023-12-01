@@ -11,14 +11,9 @@
 #include "GameManager.h"
 
 ScorpionSpawner::ScorpionSpawner()
+	: myPixelOffset(GameManager::GetGridMgr()->GetPixelDistance() / GameManager::GetGridMgr()->GetPixelDistanceOffset()), ColSpawnVal_LeftDir(GameManager::GetGridMgr()->GetNumCols()),
+		setColSpawnVal(0), scorpionPresent(false), spawnerAlarmNumTimer(0.0f), pHoldScorpState(nullptr)
 {
-	//Get the size of a cell so that the scorpion spawner can know where scorpions need to be spawned
-	myPixelOffset = GameManager::GetGridMgr()->GetPixelDistance() / GameManager::GetGridMgr()->GetPixelDistanceOffset();
-
-	//Set the right column spawn value to be at the max number of columns 
-	ColSpawnVal_LeftDir = GameManager::GetGridMgr()->GetNumCols();
-
-	spawnerAlarmNumTimer = 0;
 }
 
 void ScorpionSpawner::Alarm1()

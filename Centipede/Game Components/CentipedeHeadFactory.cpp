@@ -22,15 +22,11 @@
 CentipedeHeadFactory* CentipedeHeadFactory::ptrInstance = nullptr;
 
 CentipedeHeadFactory::CentipedeHeadFactory()
+	: spawnedInPlayerArea(false), soloHeadsPresent(false), soloHeadsPresentPlrArea(false), centiSpeed(1.0f), soloHeadSpeed(1.0f), soloHeadPlrAreaSpeed(1.0f), 
+		soloHeadSpawnInPlrAreaCount(0), pDeath(GameManager::GetScoreMgr()->GetScoreCommand(GameManager::GetScoreMgr()->ScoreEvents::CentipedeHeadKilled)), headCount(0), pSound(nullptr)
 {
 	//Get the CentipedeHead death score command from the score manager
 	ConsoleMsg::WriteLine("CentipedeHead Factory:: Getting CentipedeHead Death Score Command");
-	pDeath = GameManager::GetScoreMgr()->GetScoreCommand(GameManager::GetScoreMgr()->ScoreEvents::CentipedeHeadKilled);
-
-	//Initialize the number of centipede heads to be zero upon init
-	headCount = 0;
-
-	spawnedInPlayerArea = false;
 }
 
 CentipedeHead* CentipedeHeadFactory::privCreateCentipedeHead(sf::Vector2f pos, int row, int col, const MoveState* setState, float speed, CentipedeBody* firstNode, int offsetIncr)

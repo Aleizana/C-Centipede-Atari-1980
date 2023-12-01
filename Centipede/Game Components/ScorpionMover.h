@@ -9,7 +9,7 @@ class Scorpion;
 class ScorpionMover
 {
 public:
-	ScorpionMover() = default;
+	ScorpionMover();
 	ScorpionMover& operator=(const ScorpionMover&) = delete;
 	ScorpionMover(ScorpionMover& _copyBlaster) = delete;
 	~ScorpionMover() = default;

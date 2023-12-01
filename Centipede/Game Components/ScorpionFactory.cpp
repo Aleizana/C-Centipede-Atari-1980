@@ -16,12 +16,10 @@
 ScorpionFactory* ScorpionFactory::ptrInstance = nullptr;
 
 ScorpionFactory::ScorpionFactory()
+	: pDeath(GameManager::GetScoreMgr()->GetScoreCommand(GameManager::GetScoreMgr()->ScoreEvents::ScorpionKilled)), scorpionSpeed(0.0f), pSound(nullptr), scorpionCount(0)
 {
 	//Get the scorpion death score command from the score manager
 	ConsoleMsg::WriteLine("Scorpion Factory:: Getting Scorpion Death Score Command");
-	pDeath = GameManager::GetScoreMgr()->GetScoreCommand(GameManager::GetScoreMgr()->ScoreEvents::ScorpionKilled);
-
-	scorpionCount = 0;
 
 	scorpMoverRef = new ScorpionMover();
 }

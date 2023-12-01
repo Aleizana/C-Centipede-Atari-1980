@@ -10,7 +10,7 @@ class Blaster;
 class BlasterKeyboardController : ControllerBase
 {
 public:
-	BlasterKeyboardController() = default;
+	BlasterKeyboardController();
 	BlasterKeyboardController& operator=(const BlasterKeyboardController&) = delete;
 	BlasterKeyboardController(BlasterKeyboardController& _copyBlaster) = delete;
 	~BlasterKeyboardController() = default;

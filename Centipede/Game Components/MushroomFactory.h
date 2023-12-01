@@ -78,8 +78,6 @@ private:
 
 	void privStoreSoundCommand();
 
-	void privSendDeathSoundCommand();
-
 public:
 
 	// Services/API as STATIC METHODS
